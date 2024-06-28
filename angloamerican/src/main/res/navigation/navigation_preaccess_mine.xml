@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_preaccess_mine"
+    app:startDestination="@id/historyPreaccesMine">
+
+    <fragment
+        android:id="@+id/historyPreaccesMine"
+        android:name="com.webcontrol.angloamerican.ui.preaccessmine.ui.preaccessMineHistory.PreAccessMineHistoryFragment"
+        android:label="fragment_preaccess_mine_history"
+        tools:layout="@layout/fragment_preaccess_mine_history">
+
+        <action
+            android:id="@+id/action_historyPreaccesMine_to_newPreAccess"
+            app:destination="@id/newPreAccess" />
+        <action
+            android:id="@+id/action_historyPreaccesMine_to_preAccessMineDetail"
+            app:destination="@id/preAccessMineDetail" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/newPreAccess"
+        android:name="com.webcontrol.angloamerican.ui.preaccessmine.ui.newPreaccesMine.NewPreAccessMineFragment"
+        android:label="fragment_preaccess_mine"
+        tools:layout="@layout/fragment_preaccess_mine">
+
+        <action
+            android:id="@+id/action_newPreAccess_to_preAccessMinePassengers"
+            app:destination="@id/preAccessMinePassengers"
+            app:popUpTo="@id/historyPreaccesMine"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_newPreAccess_to_historyPreaccesMine"
+            app:destination="@id/historyPreaccesMine"
+            app:popUpTo="@id/historyPreaccesMine"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/preAccessMinePassengers"
+        android:name="com.webcontrol.angloamerican.ui.preaccessmine.ui.preaccessMinePassengers.PreAccessMinePassengersFragment"
+        android:label="fragment_preaccess_mine_passengers"
+        tools:layout="@layout/fragment_preaccess_mine_passengers">
+
+        <action
+            android:id="@+id/action_preAccessMinePassengers_to_historyPreaccesMine"
+            app:destination="@id/historyPreaccesMine"
+            app:popUpTo="@id/historyPreaccesMine"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/preAccessMineDetail"
+        android:name="com.webcontrol.angloamerican.ui.preaccessmine.ui.preaccessMineDetail.PreAccessMineDetailFragment"
+        android:label="fragment_preaccess_mine"
+        tools:layout="@layout/fragment_preaccess_mine_history_detail">
+
+        <action
+            android:id="@+id/action_preAccessMinePassengers_to_historyPreaccesMine"
+            app:destination="@id/historyPreaccesMine"
+            app:popUpTo="@id/historyPreaccesMine"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

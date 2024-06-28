@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/message_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lblitemCountCheckList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="En Proceso" />
+
+        <TextView
+            android:id="@+id/lblPlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_min"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/lblitemCountCheckList"
+            app:layout_constraintTop_toBottomOf="@+id/lblitemCountCheckList"
+            android:text="IMEI:" />
+
+
+        <TextView
+            android:id="@+id/txtPlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/txtDriver"
+            app:layout_constraintTop_toTopOf="@+id/lblPlate"
+            tools:text="ABC-123" />
+
+        <TextView
+            android:id="@+id/lblDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginEnd="@dimen/fab_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtPlate"
+            tools:text="2019-05-22 15:05" />
+
+        <TextView
+            android:id="@+id/lblState"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pendiente"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnSearchInspection"
+            app:layout_constraintStart_toStartOf="@+id/txtPlate"
+            app:layout_constraintTop_toTopOf="@+id/lblitemCountCheckList" />
+
+        <TextView
+            android:id="@+id/lblDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lblPlate"
+            app:layout_constraintTop_toBottomOf="@+id/lblPlate"
+            android:text="CURSO:" />
+
+        <TextView
+            android:id="@+id/txtDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblDriver"
+            app:layout_constraintTop_toTopOf="@+id/lblDriver"
+            tools:text="Juan Arona" />
+
+        <ImageButton
+            android:id="@+id/btnSearchInspection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:rotation="90"
+            app:layout_constraintBottom_toBottomOf="@+id/lblState"
+            app:layout_constraintEnd_toEndOf="@id/lblDate"
+            app:layout_constraintTop_toTopOf="@+id/lblState"
+            app:srcCompat="@drawable/ic_search_black" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

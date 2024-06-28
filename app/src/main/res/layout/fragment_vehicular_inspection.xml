@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/lblVehInspection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:textColor="@color/active_indicator"
+                android:textSize="23sp"
+                android:typeface="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Inspección Vehicular" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="36dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblVehInspection"
+                app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+            <TextView
+                android:id="@+id/lblDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/active_indicator"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/imageView4"
+                android:text="08-05-2019" />
+
+            <TextView
+                android:id="@+id/lblHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="44dp"
+                android:textColor="@color/active_indicator"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView5"
+                android:text="8:00 a.m." />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/lblHour"
+                app:layout_constraintTop_toBottomOf="@+id/lblVehInspection"
+                app:srcCompat="@drawable/ic_access_time_white_24dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/txtDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/margin_start_plate"
+            android:text="Operador"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+        <EditText
+            android:id="@+id/etDriverName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:background="@drawable/round_edit_text"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="text"
+            android:padding="@dimen/margin_min"
+            android:text="Nombre Conductor"
+
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintBottom_toBottomOf="@+id/txtDriver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtDriver" />
+
+        <TextView
+            android:id="@+id/txtSupervisor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/margin_start_plate"
+            android:text="Supervisor"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDriver" />
+
+        <EditText
+            android:id="@+id/etSupervisorName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:background="@drawable/round_edit_text"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="text"
+            android:padding="@dimen/margin_min"
+            android:text="Nombre Supervisor"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintBottom_toBottomOf="@+id/txtSupervisor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtSupervisor" />
+
+        <TextView
+            android:id="@+id/txtPlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/margin_start_plate"
+            android:text="Placa"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSupervisor" />
+
+        <EditText
+            android:id="@+id/etPlate"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:background="@drawable/round_edit_text"
+            android:ems="10"
+            android:enabled="true"
+            android:inputType="text"
+            android:padding="@dimen/margin_min"
+            android:textSize="@dimen/text_size_default"
+            android:hint="Ingresar Placa"
+            app:layout_constraintBottom_toBottomOf="@+id/txtPlate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtPlate" />
+
+        <TextView
+            android:id="@+id/txtModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/margin_start_plate"
+            android:text="Marca y Modelo"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPlate" />
+
+        <EditText
+            android:id="@+id/etModel"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:background="@drawable/round_edit_text"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="text"
+            android:padding="@dimen/margin_min"
+            android:text="Marca y Modelo"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintBottom_toBottomOf="@+id/txtModel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtModel" />
+
+        <TextView
+            android:id="@+id/txtShift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/margin_start_plate"
+            android:text="Turno"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtModel" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ShiftType"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:background="@drawable/round_edit_text"
+            android:hint="Turno"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="@dimen/text_size_default"
+            app:boxBackgroundColor="@color/transparent"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/txtShift"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtShift">
+
+            <AutoCompleteTextView
+                android:id="@+id/spinnerShiftType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:enabled="false"
+                android:focusable="false"
+                android:paddingStart="8dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtOdometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/margin_start_plate"
+            android:text="Odometro Inicial"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtShift" />
+
+        <EditText
+            android:id="@+id/etOdometer"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:background="@drawable/round_edit_text"
+            android:ems="10"
+            android:enabled="true"
+            android:inputType="number"
+            android:padding="@dimen/margin_min"
+            android:hint="Ingrese Odometro"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintBottom_toBottomOf="@+id/txtOdometer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtOdometer" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinueInsp"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/flat_bottom"
+            android:text="FINALIZAR"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/btnSearchPlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:rotation="90"
+            app:layout_constraintBottom_toBottomOf="@+id/etPlate"
+            app:layout_constraintEnd_toEndOf="@+id/etPlate"
+            app:layout_constraintTop_toTopOf="@+id/etPlate"
+            app:layout_constraintVertical_bias="0.571"
+            app:srcCompat="@drawable/ic_search_black" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tittleInputBooking"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimary"
+            android:paddingTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="Resultado"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txtUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:gravity="center_horizontal"
+            android:layout_marginHorizontal="24dp"
+            android:text="Resultado"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tittleInputBooking" />
+
+        <ImageView
+            android:id="@+id/imgResultIcon"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtUser"
+            app:layout_constraintStart_toStartOf="@+id/txtUser"
+            app:layout_constraintTop_toBottomOf="@+id/txtUser"
+            app:srcCompat="@drawable/question_mark" />
+
+        <TextView
+            android:id="@+id/txtCorrectAnsw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Respuestas Correctas:85%"
+            android:textSize="24sp"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/imgResultIcon"
+            app:layout_constraintStart_toStartOf="@+id/imgResultIcon"
+            app:layout_constraintTop_toBottomOf="@+id/imgResultIcon" />
+
+        <Button
+            android:id="@+id/btnBookedCourses"
+            android:layout_width="0dp"
+            android:layout_margin="24dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/flat_bottom"
+            android:text="Continuar"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

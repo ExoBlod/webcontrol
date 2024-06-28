@@ -1,0 +1,5 @@
+include ':core'
+include ':collahuasi'
+include ':app'
+include ':angloamerican'
+include ':pucobre'

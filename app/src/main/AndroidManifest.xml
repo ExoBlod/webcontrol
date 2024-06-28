@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.webcontrol.android">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+
+    <uses-feature
+        android:name="android.hardware.fingerprint"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true">
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.webcontrol.android.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
+        <activity android:name=".ui.preacceso.CheckListTestActivity" />
+        <activity android:name=".ui.settings.CambiarEmailActivity" />
+        <activity android:name=".ui.settings.CambiarTelefonoActivity" />
+        <activity android:name=".ui.settings.CambiarPermisosActivity" />
+        <activity android:name=".ui.reservabus.ReservaBusDetalleActivity"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <service android:name="com.webcontrol.android.data.services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:enabled="true"
+            android:name="com.webcontrol.android.data.services.IncomingCallNotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="ACTION_ACCEPT" />
+                <action android:name="ACTION_REJECT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <service
+            android:name="com.webcontrol.android.workers.SyncService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".workers.LocationService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location"
+            />
+        <receiver
+            android:name="com.webcontrol.android.workers.AlarmReceiver"
+            android:process=":remote" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDark.NoActionBar" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.onboarding.LauncherActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.webcontrol.android.WC_OPEN_MESSAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.settings.EnableFingerPrintActivity"
+            android:label="@string/title_activity_enable_finger_print" />
+        <activity
+            android:name=".ui.onboarding.OnBoardingActivity"
+            android:label="@string/title_activity_onboarding" />
+        <activity
+            android:name=".ui.signup.SignupActivity"
+            android:label="@string/title_activity_signup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.ChangePasswordActivity"
+            android:label="@string/title_activity_change_password"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.settings.SuccessFingerprintActivity" />
+        <activity
+            android:name=".ui.messages.DetalleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.changepassword.VerifyChangePassActivity"
+            android:label="@string/title_activity_change_pass_verify"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.changepassword.ChangePassActivity"
+            android:label="@string/title_activity_change_pass_verify"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.signup.SetNewPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.signup.ValidarCodigoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.preacceso.CabeceraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.preacceso.PasajeroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.preacceso.DetallePasajeroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.settings.ScannerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.preacceso.PreaccesoDetalleHistoricoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.newchecklist.NewCheckListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.videocall.VideoCallActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullSensor"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="INCOMING_CALL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.videocall.IncomingCallActivity"
+            android:screenOrientation="fullSensor"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ui.onboarding.OnBoardingPermission"
+            android:label="@string/title_activity_onboarding_permission" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+    </application>
+</manifest>

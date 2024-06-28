@@ -1,0 +1,32 @@
+package com.webcontrol.angloamerican.ui.checklistpreuso.data
+
+data class EvidenceList(
+    val codbarra: String,
+    val feccrea: String,
+    val fecha: String,
+    val fecmod: String,
+    val fecvalida: String,
+    val foto: String,
+    val fotoformato: String,
+    val hora: String,
+    val horavalida: String,
+    val iD_CHECK: Int,
+    val iD_CHECKING: Int,
+    val iD_CHECKINGDET: Int,
+    val iD_CHECKINGHEAD: Int,
+    val iD_TIPO: String,
+    val iD_ZONA: Int,
+    val idFoto: Int,
+    val idsync: Int,
+    val latitud: String,
+    val longitud: String,
+    val observacion: String,
+    val obsrechazo: String,
+    val usrcrea: String,
+    val usrmod: String,
+    val usrvalida: String,
+    val validado: String,
+    val valor: String,
+    val valormult: String,
+    val video: String
+)

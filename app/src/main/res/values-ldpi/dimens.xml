@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="datos_conductor_operador">18sp</dimen>
+    <dimen name="licencia_interna">18sp</dimen>
+    <dimen name="conductor_operador">18sp</dimen>
+    <dimen name="autorizacion_conducion">14sp</dimen>
+    <dimen name="empresa">11sp</dimen>
+    <dimen name="area">11sp</dimen>
+    <dimen name="puesto">11sp</dimen>
+    <dimen name="authorizado">11sp</dimen>
+    <dimen name="expedicion">11sp</dimen>
+    <dimen name="vencimiento">11sp</dimen>
+    <dimen name="titulo">9sp</dimen>
+    <dimen name="licencia">8sp</dimen>
+    <dimen name="clase">8sp</dimen>
+    <dimen name="revalidacion">8sp</dimen>
+    <dimen name="restriccion">8sp</dimen>
+    <dimen name="nombre">19sp</dimen>
+    <dimen name="apellidos">17sp</dimen>
+    <dimen name="movilesSobreTerreno">16sp</dimen>
+
+    <dimen name="dato_acceso">20sp</dimen>
+    <dimen name="empresa_contratista">10sp</dimen>
+    <dimen name="empresa_contratista_txt">14sp</dimen>
+    <dimen name="empresa_sub_contratista">10sp</dimen>
+    <dimen name="empresa_sub_contratista_txt">14sp</dimen>
+    <dimen name="items">10sp</dimen>
+    <dimen name="items_zona">8sp</dimen>
+    <dimen name="vehiculo">14sp</dimen>
+    <dimen name="conduccion">14sp</dimen>
+    <dimen name="nombre_documento">9sp</dimen>
+</resources>

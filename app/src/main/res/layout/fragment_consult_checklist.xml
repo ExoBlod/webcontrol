@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/lblVehInspection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:textColor="@color/active_indicator"
+                android:textSize="23sp"
+                android:typeface="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Inspección Vehicular" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="36dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblVehInspection"
+                app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+            <TextView
+                android:id="@+id/lblFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/active_indicator"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/imageView4"
+                android:text="08-05-2019" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtConsultCamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginTop="@dimen/margin_start_plate"
+            android:text="Campo a\nconsultar"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+        <EditText
+            android:id="@+id/etConsultCamp"
+            android:layout_width="@dimen/checklist_box"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:background="@drawable/round_edit_text"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="@dimen/margin_min"
+            android:hint="Ingresar Campo"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintBottom_toBottomOf="@+id/txtConsultCamp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtConsultCamp" />
+
+        <TextView
+            android:id="@+id/txtDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_start_plate"
+            android:text="Fecha"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintStart_toStartOf="@id/txtConsultCamp"
+            app:layout_constraintTop_toBottomOf="@+id/txtConsultCamp" />
+
+        <EditText
+            android:id="@+id/etDate"
+            android:layout_width="@dimen/checklist_box"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:background="@drawable/round_edit_text"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="@dimen/margin_min"
+            android:hint="Ingrese Fecha"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintBottom_toBottomOf="@+id/txtDriver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtDriver" />
+
+        <Button
+            android:id="@+id/btnConsultByDNI"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:text="Consultar Por DNI Trabajador"
+            app:layout_constraintEnd_toEndOf="@+id/etDate"
+            app:layout_constraintStart_toStartOf="@+id/txtDriver"
+            app:layout_constraintTop_toBottomOf="@+id/txtDriver" />
+
+        <Button
+            android:id="@+id/btnConsultByPlate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:text="Consultar Por Placa De Vehículo"
+            app:layout_constraintEnd_toEndOf="@+id/etDate"
+            app:layout_constraintStart_toStartOf="@+id/txtDriver"
+            app:layout_constraintTop_toBottomOf="@+id/btnConsultByDNI" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

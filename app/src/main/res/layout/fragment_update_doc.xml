@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.owndoc.OwnDocFragment"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txtDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/documento_update_doc_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCboDivision"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/seleccione_documento_update_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtDoc"
+        app:layout_constraintTop_toBottomOf="@+id/txtDoc"
+        app:shapeAppearanceOverlay="@style/TextInputLayout.Rounded">
+
+        <AutoCompleteTextView
+            android:id="@+id/sp_type_doc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible='false'
+            android:focusable='false'
+            android:inputType="textNoSuggestions" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtUpdateDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/subir_archivo_update_doc_fragment"
+        app:layout_constraintStart_toStartOf="@+id/tilCboDivision"
+        app:layout_constraintTop_toBottomOf="@+id/tilCboDivision" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilUpdateFile"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:visibility="visible"
+        app:endIconDrawable="@drawable/ic_file_own_doc"
+        app:endIconMode="custom"
+        app:layout_constraintEnd_toStartOf="@+id/imPhotoPrimary3"
+        app:layout_constraintStart_toStartOf="@+id/txtUpdateDoc"
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdateDoc"
+        app:shapeAppearanceOverlay="@style/TextInputLayout.Rounded">
+
+        <AutoCompleteTextView
+            android:id="@+id/etUpdateFile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:inputType="textNoSuggestions" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtTakePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/take_pic_front_update_doc_fragment"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/tilUpdateFile"
+        app:layout_constraintTop_toBottomOf="@+id/tilUpdateFile"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTakePic"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        app:endIconDrawable="@drawable/ic_camera_update_doc"
+        app:endIconMode="custom"
+        app:layout_constraintEnd_toStartOf="@+id/imPhotoPrimary"
+        app:layout_constraintStart_toStartOf="@+id/txtTakePic"
+        app:layout_constraintTop_toBottomOf="@+id/txtTakePic"
+        app:shapeAppearanceOverlay="@style/TextInputLayout.Rounded"
+        tools:visibility="visible">
+
+        <AutoCompleteTextView
+            android:id="@+id/etTakePic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:inputType="textNoSuggestions" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imPhotoPrimary"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_eye_own_doc"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tilTakePic"
+        app:layout_constraintEnd_toEndOf="@+id/imPhotoPrimary3"
+        app:layout_constraintTop_toTopOf="@+id/tilTakePic"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imPhotoPrimary3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_eye_own_doc"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tilUpdateFile"
+        app:layout_constraintEnd_toEndOf="@+id/tilCboDivision"
+        app:layout_constraintTop_toTopOf="@+id/tilUpdateFile"
+        tools:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imPhotoPrimary2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_eye_own_doc"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tilTakePic2"
+        app:layout_constraintEnd_toEndOf="@+id/imPhotoPrimary"
+        app:layout_constraintTop_toTopOf="@+id/tilTakePic2"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/txtTakePic2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/take_pic_back_update_doc_fragment"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/tilTakePic"
+        app:layout_constraintTop_toBottomOf="@+id/tilTakePic"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTakePic2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        app:endIconDrawable="@drawable/ic_camera_update_doc"
+        app:endIconMode="custom"
+        app:layout_constraintEnd_toStartOf="@+id/imPhotoPrimary2"
+        app:layout_constraintStart_toStartOf="@+id/txtTakePic2"
+        app:layout_constraintTop_toBottomOf="@+id/txtTakePic2"
+        app:shapeAppearanceOverlay="@style/TextInputLayout.Rounded"
+        tools:visibility="visible">
+
+        <AutoCompleteTextView
+            android:id="@+id/etTakePic2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:inputType="textNoSuggestions" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_process"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/procesar_own_doc_fragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

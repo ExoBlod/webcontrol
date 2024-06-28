@@ -1,0 +1,246 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'dagger.hilt.android.plugin'
+    id "org.jlleitschuh.gradle.ktlint" version "11.0.0"
+    id "io.gitlab.arturbosch.detekt" version "1.21.0"
+    id 'org.jetbrains.kotlinx.kover' version '0.6.1'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    ndkVersion "20.1.5948944"
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.webcontrol.android"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 198
+        versionName "1.29.9"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+
+    kotlinOptions { jvmTarget = "1.8" }
+
+//    lint {
+//        baseline = file("lint-baseline.xml")
+//    }
+
+    buildTypes {
+        debug {
+            resValue("string", "ws_url", "http://m1.webcontrolcorp.com/ws/quebradablanca/api/")
+            resValue("string", "ws_url_yamana", "http://m3.webcontrolcorp.com/yamana/wsexamenes/")
+            resValue("string", "ws_url_bambas", "http://m1.webcontrolcorp.com/ws/bambas/api/api/")
+            resValue("string", "ws_url_poderosa", "https://m1.webcontrolcorp.com/ws/poderosa/api/")
+            resValue("string", "ws_url_phc", "https://m1.webcontrolcorp.com/ws/phc/api/api/")
+            resValue("string", "ws_url_anglo", "http://m1.webcontrolcorp.com/ws/anglo/api/v2/")
+            resValue("string", "ws_url_gmp", "https://m1.webcontrolcorp.com/gmp/api/")
+            resValue("string", "ws_url_ks", "https://m1.webcontrolcorp.com/ws/ks/api/api/")
+            resValue("string", "ws_url_yamanacre", "https://m1.webcontrolcorp.com/ws/yamana/api/v1/")
+            resValue("string", "ws_url_caseronescre", "http://m1.webcontrolcorp.com/ws/caserones/api/v1/")
+            resValue("string", "ws_url_ea", "https://m1.webcontrolcorp.com/ws/elabra/api/v1/")
+            resValue("string", "ws_url_anta", "https://m1.webcontrolcorp.com/ws/antapaccay/api/v1/")
+            resValue("string", "ws_url_cdl", "https://m1.webcontrolcorp.com/ws/candelaria/api/v1/")
+            resValue("string", "ws_url_mensajeria", "http://m1.webcontrolcorp.com/ws/webcontrol/api/api/")
+            resValue("string", "ws_url_kinross", "https://m1.webcontrolcorp.com/ws/kinross/api/v2/")
+            resValue("string", "ws_url_goldfields", "https://m1.webcontrolcorp.com/ws/goldfields/api/v1/")
+            resValue("string", "ws_url_barrick", "http://m1.webcontrolcorp.com/ws/barrick/api/v1/")
+            resValue("string", "ws_url_sgmc", "http://m1.webcontrolcorp.com/ws/sierragorda/casino/v2/")
+            resValue("string", "ws_url_collahuasi", "http://m1.webcontrolcorp.com/ws/collahuasi/api/v1/")
+            resValue("string", "ws_url_mc", "https://m1.webcontrolcorp.com/ws/mantoscopper/api/v2/")
+            resValue("string", "ws_url_webcondocs", "https://m1.webcontrolcorp.com/webcondocs/apiwebcontrol/api/")
+            resValue("string", "ws_url_pucobre", "https://m1.webcontrolcorp.com/ws/pucobre/acceso/")
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        qa {
+//            resValue("string", "ws_url_anglo", "https://angloamerican.webcontrolcorp.com/ApiAccesoFaenaV2/v2/") //Wc
+            resValue("string", "ws_url_anglo", "https://coppermtsqa.anglochile.cl/APIAccesoFaenaV2/v2/")
+            //Anglo
+        }
+
+        release {
+            resValue("string", "ws_url", "https://quebradablanca.webcontrol.cl/wsappqblanca/")
+            resValue("string", "ws_url_yamana", "http://m3.webcontrolcorp.com/yamana/wsexamenes/")
+            resValue("string", "ws_url_bambas", "http://mmg-bso-dev-web04-e1.azurewebsites.net/api/")
+            resValue("string", "ws_url_poderosa", "https://poderosa.webcontrolcorp.com/wsapi/api/")
+            resValue("string", "ws_url_phc", "https://pacifichydrochile.webcontrolcorp.com/wsAccesoNL/api/")
+            resValue("string", "ws_url_anglo", "https://webcontrol.anglochile.cl/APIAccesoFaenaV2/v2/")
+            resValue("string", "ws_url_gmp", "https://gmp.webcontrolcorp.com/api/")
+            resValue("string", "ws_url_ks", "https://kschile.webcontrol.cl/WsAccesoNL/api/")
+            resValue("string", "ws_url_yamanacre", "https://yamana.webcontrol.cl/wscredencial/v1/")
+            resValue("string", "ws_url_caseronescre", "https://caserones.webcontrol.cl/WsAccesoNewland/Api/v1/")
+            resValue("string", "ws_url_ea", "https://elabra.webcontrol.cl/wscredencial/v1/")
+            resValue("string", "ws_url_anta", "https://app.antapaccay.com.pe/api/v1/")
+            resValue("string", "ws_url_cdl", "https://acc.candelaria.cl/wsencuesta/v1/")
+            resValue("string", "ws_url_kinross", "https://kinross.webcontrolcorp.com/WsCasinoOfflineNL/v2/")
+            resValue("string", "ws_url_mensajeria", "https://webcontrol.webcontrol.cl/wsmensajeria/api/")
+            resValue("string", "ws_url_pucobre", "https://pucobre.webcontrolcorp.com/wsaccesonl/")
+            resValue("string", "ws_url_goldfields", "https://goldfields.webcontrol.cl/WsAccesoNL/v1/")
+            resValue("string", "ws_url_barrick", "https://barrick.webcontrol.cl/WSCasinoNew/v1/")
+            resValue("string", "ws_url_sgmc", "https://sgscm.webcontrol.cl/wscasinonewland/v2/")
+            resValue("string", "ws_url_collahuasi", "http://asistencia.collahuasi.cl:81/V3/apiasistencia/v1/")
+            resValue("string", "ws_url_mc", "https://mantoscopper.webcontrol.cl/WsAccesoBuses/v2/")
+            resValue("string", "ws_url_webcondocs", "https://centralizado.webcontrol.cl/APIWebcontrol/api/")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+ktlint {
+    android = true
+    ignoreFailures = false
+    reporters {
+        reporter "plain"
+        reporter "checkstyle"
+        reporter "html"
+    }
+}
+
+detekt {
+    config = files("$rootProject.projectDir/config/detekt/detekt.yml")
+    reports {
+        xml.enabled = true
+        html.enabled = true
+        txt.enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.fragment:fragment-ktx:1.5.1'
+    implementation 'androidx.preference:preference-ktx:1.2.0'
+    implementation 'androidx.work:work-runtime:2.7.1'
+    // navigation
+    implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
+    implementation project(path: ':core')
+    implementation project(':angloamerican')
+    implementation project(':pucobre')
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.4'
+    implementation 'com.google.firebase:firebase-config-ktx:21.2.0'
+    // lifecycle
+    def lifecycle_version = '2.2.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation "android.arch.work:work-runtime:1.0.1"
+    //firebase
+    implementation 'com.google.firebase:firebase-iid:21.1.0'
+    implementation 'com.google.firebase:firebase-core:17.2.3'
+    implementation 'com.google.firebase:firebase-messaging:21.1.0'
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.1'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.8.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'org.conscrypt:conscrypt-android:2.5.2'
+    //miscelanea
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    // deprecated
+    implementation 'com.karumi:dexter:6.2.3'
+    implementation 'com.vmadalin:easypermissions-ktx:1.0.0'
+    implementation 'com.cuneytayyildiz:onboarder:2.0.0'
+    implementation 'uk.co.samuelwall:material-tap-target-prompt:2.12.3'
+    implementation 'com.airbnb.android:lottie:5.2.0'
+    implementation 'com.mindorks:paracamera:0.2.2'
+    implementation 'com.kofigyan.stateprogressbar:stateprogressbar:1.0.0'
+    // twilio video
+    implementation 'com.twilio:video-android:5.5.1'
+
+    implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:0.0.2'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+    implementation 'com.thoughtbot:expandablerecyclerview:1.3'
+    implementation 'nl.dionsegijn:konfetti:1.1.2'
+    implementation 'com.stepstone.apprating:app-rating:2.3.0'
+    implementation 'com.hbb20:ccp:2.2.3'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    kapt 'com.github.bumptech.glide:compiler:4.13.2'
+    // Room
+    def room_version = "2.4.2"
+    implementation "androidx.room:room-ktx:$room_version"
+    implementation "androidx.room:room-runtime:${room_version}"
+    implementation "androidx.room:room-rxjava2:${room_version}"
+    kapt "androidx.room:room-compiler:${room_version}"
+
+    // rxja
+    implementation "io.reactivex.rxjava2:rxjava:2.2.9"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    // qr generator
+    implementation 'com.google.zxing:core:3.4.0'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+    // koin
+    implementation "org.koin:koin-android:2.2.2"
+    implementation "org.koin:koin-androidx-viewmodel:2.2.2"
+    // location
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    // play core
+    implementation "com.google.android.play:core-ktx:1.8.1"
+    //Dagger Hilt
+    def hilt_version = '2.42'
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+    implementation 'androidx.hilt:hilt-work:1.0.0'
+    kapt 'androidx.hilt:hilt-compiler:1.0.0'
+
+    //JSoup
+    implementation 'org.jsoup:jsoup:1.13.1'
+
+    //Stetho
+    def stetho_version = '1.5.1'
+    implementation "com.facebook.stetho:stetho:s$stetho_version"
+    implementation "com.facebook.stetho:stetho-okhttp3:$stetho_version"
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //signaturePad
+    implementation 'com.github.gcacace:signature-pad:1.3.1'
+    implementation 'com.otaliastudios:cameraview:2.7.2'
+
+    implementation 'com.google.zxing:core:3.4.0'
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+
+}
+

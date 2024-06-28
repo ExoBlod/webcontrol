@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="credential_title">CREDENCIAL PERSONAL</string>
+    <string name="credential_note_ks">Mantener su licencia vigente renovando su vencimiento. Comunicar inmediatamente
+        al departamento de prevención de riesgos la fecha de renovación de la licencia y del examen psicosensotécnico.
+        La autorización queda nula al vencer la fecha de la licencia.</string>
+    <string name="text_ok">ACEPTAR</string>
+</resources>

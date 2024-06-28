@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#163c5d</color>
+    <color name="subtitle">#898B8C</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorPrimaryDark">#171D28</color>
+    <color name="colorAccent">#4b80ab</color>
+    <color name="white">@android:color/white</color>
+    <color name="colorCredentialAnglo">#00538C</color>
+    <color name="colorExternalCredentialAnglo">#FF5B33</color>
+    <color name="sekizbit_switch_text_unselected">@android:color/white</color>
+
+
+    <color name="colorCredentialAngloN">#00538C</color>
+    <color name="contentDividerLine">#e0e0e0</color>
+    <color name="contentBadgeTitle">#a9a9a9</color>
+    <color name="mainTextColor">#343d43</color>
+    <color name="colorRed">#DF2222</color>
+
+
+    <!-- Credentials color -->
+    <color name="colorCredential">#f0ce98</color>
+    <!-- <color name="colorCredentialAnglo">#00538C</color>-->
+   <color name="colorazul">#132A9E</color>
+   <color name="translucentBlue">#BE132A9E</color>
+   <color name="colorAzulOscuro">#0A1754</color>
+   <color name="colorazulclaro">#2F5FEA</color>
+   <color name="colorCeleste">#DBE1F1</color>
+   <color name="colorAzul849FEC">#849FEC</color>
+   <color name="celeste">#73BACB</color>
+   <color name="blancohumo">#F4F7FA</color>
+</resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "728038667765",
+    "firebase_url": "https://webcontrol-op.firebaseio.com",
+    "project_id": "webcontrol-op",
+    "storage_bucket": "webcontrol-op.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728038667765:android:4fb9133d33ec74b0",
+        "android_client_info": {
+          "package_name": "com.webcontrol.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728038667765-1hsan05elnvt1uiic76ebkq6lqdpd5vp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5ovI4AzIRMla3j4g6kZU5fnbkOCD5pNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728038667765-1hsan05elnvt1uiic76ebkq6lqdpd5vp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "728038667765-1ht3brr9tha08odc83mco1podjhcc949.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "desarrollo.webcontrolOP"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:cornerRadius="24dp"
+        app:strokeColor="@color/colorPrimary"
+        android:textColor="@drawable/bg_chip_state_text"
+        app:backgroundTint="@drawable/bg_chip_state"
+        android:checkable="true"
+        tools:text="Esto es un texto de prueba muy muy muy muy largo"
+        />
+</FrameLayout>
+

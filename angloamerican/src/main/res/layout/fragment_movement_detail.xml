@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@color/white"
+                android:elevation="15dp"
+                app:cardCornerRadius="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Datos del pase"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/startGuideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.09" />
+
+                    <TextView
+                        android:id="@+id/batchNameLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:text="N° Pase:"
+                        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                    <TextView
+                        android:id="@+id/issueDateLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:text="Fecha Creación"
+                        app:layout_constraintStart_toStartOf="@+id/endGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/endBatchDate" />
+
+                    <TextView
+                        android:id="@+id/startBatchDateLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Fecha Inicio"
+                        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/divisionName" />
+
+                    <TextView
+                        android:id="@+id/endBatchDateLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="19dp"
+                        android:text="Fecha Final"
+                        app:layout_constraintStart_toStartOf="@+id/endGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/passType" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="Administrador"
+                        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/ostlt" />
+
+                    <TextView
+                        android:id="@+id/companyNameLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Empresa"
+                        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/batchNameLabel" />
+
+                    <TextView
+                        android:id="@+id/passTypeLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo Pase"
+                        app:layout_constraintStart_toStartOf="@+id/endGuideline"
+                        app:layout_constraintTop_toTopOf="@+id/divisionNameLabel" />
+
+                    <TextView
+                        android:id="@+id/ostltLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:text="Contrato/OST"
+                        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/startBatchDate" />
+
+                    <TextView
+                        android:id="@+id/divisionNameLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:text="División"
+                        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/companyName" />
+
+                    <TextView
+                        android:id="@+id/plateLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="Patente"
+                        app:layout_constraintStart_toStartOf="@+id/endGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/issueDate" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/endGuideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.56" />
+
+                    <TextView
+                        android:id="@+id/batchName"
+                        android:layout_width="0dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre de División"
+                        app:layout_constraintStart_toStartOf="@+id/endGuideline"
+                        app:layout_constraintTop_toTopOf="@+id/batchNameLabel" />
+
+                    <TextView
+                        android:id="@+id/issueDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre de División"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/endGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/issueDateLabel" />
+
+                    <TextView
+                        android:id="@+id/batchState"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_movement_label"
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="10dp"
+                        android:text="Pendiente"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+                    <TextView
+                        android:id="@+id/startBatchDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Batch state"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/startBatchDateLabel" />
+
+                    <TextView
+                        android:id="@+id/endBatchDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Batch state"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/endGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/endBatchDateLabel" />
+
+                    <TextView
+                        android:id="@+id/approverUserName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Batch state"
+                        android:textColor="@color/black"
+                        android:ellipsize="end"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+                        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                    <TextView
+                        android:id="@+id/companyName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Batch state"
+                        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/companyNameLabel" />
+
+                    <TextView
+                        android:id="@+id/passType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Batch state"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/endGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/passTypeLabel" />
+
+                    <TextView
+                        android:id="@+id/ostlt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Batch state"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/ostltLabel" />
+
+                    <TextView
+                        android:id="@+id/divisionName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Batch state"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/divisionNameLabel" />
+
+                    <TextView
+                        android:id="@+id/plate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Batch state"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/endGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/plateLabel" />
+
+                    <TextView
+                        android:id="@+id/approverUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/endGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/approverUserName"/>
+
+                    <TextView
+                        android:id="@+id/divisionId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/endGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/approverUser"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/approveButton"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/approve_button_color"
+                app:cornerRadius="15dp"
+                android:textSize="25sp"
+                android:textAppearance="@style/ButtonTextStyle"
+                android:text="Autorizar" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/denyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:textColor="@color/red"
+                app:cornerRadius="10dp"
+                android:textAppearance="@style/ButtonTextStyle"
+                android:text="Rechazar Pase" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:alpha=".7" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cargando..."
+            app:layout_constraintEnd_toEndOf="@+id/progressBar"
+            app:layout_constraintStart_toStartOf="@+id/progressBar"
+            app:layout_constraintTop_toBottomOf="@id/progressBar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

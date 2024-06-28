@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/layout_bg">
+
+        <TextView
+            android:id="@+id/lblTestTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="13dp"
+            android:paddingEnd="4dp"
+            android:text="¿Pregunta 1?"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/msg_text_primary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/card_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/yellowCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            app:cardBackgroundColor="#FFD703"
+            android:layout_marginStart="24dp"
+            android:visibility="gone"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/lblTestTitle"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/yellowTextCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="LLEVAR AL TALLER"
+                android:textColor="#000000"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/redCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            app:cardBackgroundColor="@color/red"
+            android:layout_marginStart="24dp"
+            android:visibility="gone"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/lblTestTitle"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/redTextCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="DETENER EL VEHICULO Y SOLICITAR ASISTENCIA"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/greenCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            app:cardBackgroundColor="@color/color_green"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/lblTestTitle"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/greenTextCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="SOLUCION BAJO RESPONSABILIDAD"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:id="@+id/card_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/sekizbit_switch_v2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTestTitle"
+            app:layout_constraintVertical_bias="0.5">
+
+            <com.otaliastudios.cameraview.CameraView
+                android:id="@+id/cameraView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageEvidence"
+                android:layout_width="144dp"
+                android:layout_height="137dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cam"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/sekizbit_switch_v2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_img">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnYes"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0.5"
+                android:backgroundTint="@color/white"
+                android:text="SÍ"
+                android:textSize="14sp"
+                app:background="@drawable/sekizbit_selector_btn_no"
+                app:cornerRadius="19dp"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0.5"
+                android:backgroundTint="@color/white"
+                android:text="NO"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                app:background="@drawable/sekizbit_selector_btn_no"
+                app:cornerRadius="19dp"
+                app:strokeColor="@color/red"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0.5"
+                android:backgroundTint="@color/white"
+                android:text="N/A"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                app:background="@drawable/sekizbit_selector_btn_no"
+                app:cornerRadius="19dp"
+                app:strokeColor="@color/colorBlack"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

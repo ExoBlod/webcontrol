@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti_fr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/resultados_scroll_fr"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegresar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgCardView_fr"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:elevation="12dp"
+                    android:innerRadius="0dp"
+                    android:shape="ring"
+                    android:thicknessRatio="1.9"
+                    app:cardCornerRadius="65dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imgUsuario_fr"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_logo"></ImageView>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/lblNombreUsuario_fr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCardView_fr"
+                    tools:text="Nombres y Apellidos" />
+
+                <TextView
+                    android:id="@+id/lblDescripcion_fr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblNombreUsuario_fr"
+                    tools:text="Descripcion del curso" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="368dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblDescripcion_fr" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider4">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TableLayout
+                            android:id="@+id/tableLayout"
+                            android:layout_width="340dp"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/lblTotalPreguntas_fr"
+                                    android:layout_column="0"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    tools:text="12" />
+
+                                <View
+                                    android:id="@+id/divider5"
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_column="1"
+                                    android:layout_gravity="center"
+                                    android:background="?android:attr/listDivider" />
+
+                                <TextView
+                                    android:id="@+id/lblTotalPreguntasAcertadas_fr"
+                                    android:layout_column="2"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    tools:text="10" />
+
+                                <View
+                                    android:id="@+id/divider6"
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_column="3"
+                                    android:layout_gravity="center"
+                                    android:background="?android:attr/listDivider" />
+
+                                <TextView
+                                    android:id="@+id/lblPorcentajeAcierto_fr"
+                                    android:layout_column="4"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    tools:text="90 %" />
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_column="0"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="Preguntas"
+                                    android:textSize="18sp" />
+
+                                <View
+                                    android:id="@+id/divider7"
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_column="1"
+                                    android:layout_gravity="center"
+                                    android:background="?android:attr/listDivider" />
+
+                                <TextView
+                                    android:layout_column="2"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="Correctas"
+                                    android:textSize="18sp" />
+
+                                <View
+                                    android:id="@+id/divider8"
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_column="3"
+                                    android:layout_gravity="center"
+                                    android:background="?android:attr/listDivider" />
+
+                                <TextView
+                                    android:layout_column="4"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="Porcentaje"
+                                    android:textSize="18sp" />
+                            </TableRow>
+
+                        </TableLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/imgResultado_fr"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/cup"
+                    app:layout_constraintBottom_toTopOf="@+id/lblMensaje_fr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+                <TextView
+                    android:id="@+id/lblMensaje_fr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="76dp"
+                    android:gravity="center"
+                    android:text="Mensaje de termino de curso"
+                    android:textSize="14dp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegresar"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/flat_bottom"
+            android:text="REGRESAR"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:paddingTop="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.reservabus.ReservaBusDetalleActivity"
+    tools:showIn="@layout/activity_reserva_bus_detalle">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/lblFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/active_indicator"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/icon_my_calendar"
+                app:layout_constraintTop_toTopOf="@+id/icon_my_calendar"
+                tools:text="08-05-2019" />
+
+            <TextView
+                android:id="@+id/lblHora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="44dp"
+                android:textColor="@color/active_indicator"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/icon_access_time"
+                tools:text="8:00 a.m." />
+
+            <ImageView
+                android:id="@+id/icon_my_calendar"
+                android:layout_width="36dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+            <ImageView
+                android:id="@+id/icon_access_time"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/lblHora"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_access_time_white_24dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutTitle"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/text_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Detalle Reserva"
+                android:textColor="#605C5C"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/image_qr"
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:layout_margin="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_titulo" />
+
+            <TextView
+                android:id="@+id/text_nro_asiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="AAA111"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_qr" />
+
+            <TextView
+                android:id="@+id/text_titlo_asiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Nro Asiento"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_nro_asiento" />
+
+            <View
+                android:id="@+id/divider_horizontal_1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/black"
+                app:layout_constraintEnd_toEndOf="@id/image_qr"
+                app:layout_constraintStart_toStartOf="@id/image_qr"
+                app:layout_constraintTop_toBottomOf="@id/text_titlo_asiento" />
+
+            <TextView
+                android:id="@+id/text_origen"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="ORIGEN\nVIAJE"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/divider_horizontal_2"
+                app:layout_constraintStart_toStartOf="@id/divider_horizontal_1"
+                app:layout_constraintTop_toBottomOf="@id/divider_horizontal_1" />
+
+            <ImageView
+                android:id="@+id/icon_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:rotationY="180"
+                android:src="@drawable/ic_triple_arrowhead"
+                app:layout_constraintBottom_toTopOf="@id/divider_horizontal_2"
+                app:layout_constraintEnd_toStartOf="@id/text_destino"
+                app:layout_constraintStart_toEndOf="@id/text_origen"
+                app:layout_constraintTop_toBottomOf="@id/divider_horizontal_1" />
+
+            <TextView
+                android:id="@+id/text_destino"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="DESTINO\nVIAJE"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/divider_horizontal_2"
+                app:layout_constraintEnd_toEndOf="@id/divider_horizontal_1"
+                app:layout_constraintTop_toBottomOf="@id/divider_horizontal_1" />
+
+            <View
+                android:id="@+id/divider_horizontal_2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="80dp"
+                android:background="@android:color/black"
+                app:layout_constraintEnd_toEndOf="@id/image_qr"
+                app:layout_constraintStart_toStartOf="@id/image_qr"
+                app:layout_constraintTop_toBottomOf="@id/divider_horizontal_1" />
+
+            <View
+                android:id="@+id/divider_vertical_1"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="20dp"
+                android:background="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_horizontal_2" />
+
+            <ImageView
+                android:id="@+id/icon_calendar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintStart_toStartOf="@id/divider_horizontal_2"
+                app:layout_constraintEnd_toStartOf="@id/divider_vertical_1"
+                app:layout_constraintBottom_toTopOf="@id/text_fecha"
+                app:layout_constraintTop_toTopOf="@id/divider_vertical_1" />
+
+            <TextView
+                android:id="@+id/text_fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01/01/2021"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/divider_vertical_1"
+                app:layout_constraintEnd_toStartOf="@id/divider_vertical_1"
+                app:layout_constraintStart_toStartOf="@id/divider_horizontal_2"
+                app:layout_constraintTop_toBottomOf="@id/icon_calendar" />
+
+            <ImageView
+                android:id="@+id/icon_reloj"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_reloj"
+                app:layout_constraintEnd_toEndOf="@id/divider_horizontal_2"
+                app:layout_constraintStart_toEndOf="@id/divider_vertical_1"
+                app:layout_constraintBottom_toTopOf="@id/text_hora"
+                app:layout_constraintTop_toTopOf="@id/divider_vertical_1" />
+
+            <TextView
+                android:id="@+id/text_hora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/divider_vertical_1"
+                app:layout_constraintEnd_toEndOf="@id/divider_horizontal_2"
+                app:layout_constraintStart_toEndOf="@id/divider_vertical_1"
+                app:layout_constraintTop_toBottomOf="@id/icon_reloj" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

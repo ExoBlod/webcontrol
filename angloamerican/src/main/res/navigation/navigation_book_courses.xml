@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_new_checklist"
+    app:startDestination="@id/historyBookFragment">
+
+    <fragment
+        android:id="@+id/historyBookFragment"
+        android:name="com.webcontrol.angloamerican.ui.bookcourses.ui.bookcourseshistory.BookCoursesHistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history_book_courses">
+        <action
+            android:id="@+id/action_historyBookFragment_to_newBookCourses"
+            app:destination="@id/newBookCourses" />
+        <action
+            android:id="@+id/action_historyBookFragment_to_bookedCourses"
+            app:destination="@id/bookedCourses" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/newBookCourses"
+        android:name="com.webcontrol.angloamerican.ui.bookcourses.ui.newBookCourses.NewBookCoursesFragment"
+        android:label="fragment_new_book_courses"
+        tools:layout="@layout/fragment_new_book_courses">
+        <action
+            android:id="@+id/action_newBookCourses_to_inputBooking"
+            app:destination="@id/inputBooking" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputBooking"
+        android:name="com.webcontrol.angloamerican.ui.bookcourses.ui.inputBookingCourses.InputBookingCoursesFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_input_booking">
+        <action
+            android:id="@+id/action_inputBooking_to_historyBookFragment"
+            app:destination="@id/historyBookFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookedCourses"
+        android:name="com.webcontrol.angloamerican.ui.bookcourses.ui.bookedCourses.BookedCoursesFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_booked_courses">
+        <action
+            android:id="@+id/action_bookedCourses_to_courseContent"
+            app:destination="@id/courseContent" />
+        <action
+            android:id="@+id/action_bookedCourses_to_historyBookFragment"
+            app:destination="@id/historyBookFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/courseContent"
+        android:name="com.webcontrol.angloamerican.ui.bookcourses.ui.coursecontent.CourseContentFragment"
+        android:label="fragment_course_content"
+        tools:layout="@layout/fragment_course_content">
+        <action
+            android:id="@+id/action_courseContent_to_testBookingCourse"
+            app:destination="@id/testBookingCourse" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/testBookingCourse"
+        android:name="com.webcontrol.angloamerican.ui.bookcourses.ui.testBookingCourse.TestBookingCourseFragment"
+        android:label="fragment_test_booking_course"
+        tools:layout="@layout/fragment_test_booking_course">
+        <action
+            android:id="@+id/action_testBookingCourse_to_resultTestBookingCourse"
+            app:destination="@id/resultTestBookingCourse" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultTestBookingCourse"
+        android:name="com.webcontrol.angloamerican.ui.bookcourses.ui.resulttest.ResultTestFragment"
+        android:label="fragment_result_test_booking_course"
+        tools:layout="@layout/fragment_result_test_booking_course">
+        <action
+            android:id="@+id/action_resultTestBookingCourse_to_historyBookFragment"
+            app:destination="@id/historyBookFragment" />
+        <action
+            android:id="@+id/action_resultTestBookingCourse_to_extraVideo"
+            app:destination="@id/extraVideo">
+            <argument
+                android:name="nombreVideo"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/extraVideo"
+        android:name="com.webcontrol.angloamerican.ui.bookcourses.ui.extravideo.ExtraVideoFragment"
+        android:label="fragment_extra_video"
+        tools:layout="@layout/fragment_course_content">
+        <action
+            android:id="@+id/action_extraVideo_to_historyBookFragment"
+            app:destination="@id/historyBookFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lblTestTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:paddingEnd="4dp"
+            android:text="1: ¿Descanso bien la noche anterior?"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblTestDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:paddingEnd="4dp"
+            android:text="Esta es información adicional."
+            android:textColor="@color/colorSecondary"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTestTitle" />
+
+        <LinearLayout
+            android:id="@+id/sekizbit_switch_v2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblTestDescription">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sekizbit_switch_btn_left2"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0.5"
+                android:text="MALO"
+                android:textColor="@drawable/sekizbit_selector_btn_text_color_left"
+                android:textSize="14sp"
+                app:backgroundTint="@drawable/sekizbit_selector_btn_left"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/colorCheckListNo" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sekizbit_switch_btn_no_apply"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0.5"
+                android:text="NO APLICA"
+                android:textColor="@drawable/sekizbit_selector_btn_text_color_no_apply"
+                android:textSize="12sp"
+                app:backgroundTint="@drawable/sekizbit_selector_btn_no_apply"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/orange" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sekizbit_switch_btn_right2"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0.5"
+                android:text="BUENO"
+                android:textColor="@drawable/sekizbit_selector_btn_text_color_right"
+                android:textSize="14sp"
+                app:backgroundTint="@drawable/sekizbit_selector_btn_right"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

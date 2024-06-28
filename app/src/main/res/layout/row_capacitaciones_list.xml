@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewCurso"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="4dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="4dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1dp"
+    app:cardMaxElevation="1dp"
+    app:cardPreventCornerOverlap="true"
+
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerCapa"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lblNombreCurso"
+            android:layout_width="316dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageC"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="CAPACITACIÓN 1" />
+
+
+        <TextView
+            android:id="@+id/lblCod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="DRCSCC001"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/imageC"
+            app:layout_constraintTop_toBottomOf="@+id/lblNombreCurso" />
+
+        <TextView
+            android:id="@+id/lblNota"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnInfo"
+            app:layout_constraintStart_toEndOf="@+id/lblCod"
+            app:layout_constraintTop_toBottomOf="@+id/lblNombreCurso"
+            tools:text="Estado: Valido" />
+
+        <TextView
+            android:id="@+id/lblDatetime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnInfo"
+            app:layout_constraintStart_toEndOf="@+id/lblCod"
+            app:layout_constraintTop_toBottomOf="@+id/lblNota"
+            tools:text="Fecha: 03/05/2022" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnInfo"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="39dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="0.5"
+            app:icon="@drawable/ic_keyboard_arrow_down"
+            app:iconTint="@color/colorAzulOscuro"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#00FFFFFF" />
+
+        <ImageView
+            android:id="@+id/imageC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_check_circle_green_24dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

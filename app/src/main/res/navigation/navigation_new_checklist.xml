@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_new_checklist"
+    app:startDestination="@id/consultInspectionsFragment">
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.webcontrol.android.ui.newchecklist.views.history.HistoryChecklistFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_inspection_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_swornDeclarationFragment"
+            app:destination="@id/swornDeclarationFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_listCheckListFragment"
+            app:destination="@id/listCheckListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/swornDeclarationFragment"
+        android:name="com.webcontrol.android.ui.newchecklist.views.sworndeclaration.SwornDeclarationFragment"
+        android:label="fragment_sworn_declaration"
+        tools:layout="@layout/fragment_sworn_statement" >
+        <action
+            android:id="@+id/action_swornDeclarationFragment_to_signatureFragment"
+            app:destination="@id/signatureFragment" />
+        <action
+            android:id="@+id/action_swornDeclarationFragment_to_inputDataFragment"
+            app:destination="@id/inputDataFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signatureFragment"
+        android:name="com.webcontrol.android.ui.newchecklist.views.signature.SignatureFragment"
+        android:label="fragment_signature"
+        tools:layout="@layout/fragment_record_signature" >
+        <action
+            android:id="@+id/action_signatureFragment_to_inputDataFragment"
+            app:destination="@id/inputDataFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputDataFragment"
+        android:name="com.webcontrol.android.ui.newchecklist.views.inputdata.InputDataFragment"
+        android:label="fragment_input_data"
+        tools:layout="@layout/fragment_vehicular_inspection" >
+
+        <action
+            android:id="@+id/action_inputDataFragment_to_listCheckListFragment"
+            app:destination="@id/listCheckListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listCheckListFragment"
+        android:name="com.webcontrol.android.ui.newchecklist.views.listchecklist.ListCheckListFragment"
+        android:label="fragment_input_data2"
+        tools:layout="@layout/fragment_checklist_vehicular_inspection" >
+        <action
+            android:id="@+id/action_listCheckListFragment_to_checkListFillingFragment"
+            app:destination="@id/checkListFillingFragment" >
+            <argument
+                android:name="position"
+                app:argType="integer"
+                />
+        </action>
+        <action
+            android:id="@+id/action_listCheckListFragment_to_evidencePhotoFragment"
+            app:destination="@id/evidencePhotoFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/checkListFillingFragment"
+        android:name="com.webcontrol.android.ui.newchecklist.views.checklistfilling.CheckListFillingFragment"
+        android:label="fragment_input_data3"
+        tools:layout="@layout/fragment_test_checklist_vehicular_inspection" >
+        <argument
+            android:name="position"
+            app:argType="integer"
+            android:defaultValue="0"/>
+
+        <action
+            android:id="@+id/action_checkListFillingFragment_to_listCheckListFragment"
+            app:destination="@id/listCheckListFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/evidencePhotoFragment"
+        android:name="com.webcontrol.android.ui.newchecklist.views.takeevidencephoto.TakeEvidencePhotoFragment"
+        android:label="fragment_list_checklist"
+        tools:layout="@layout/fragment_evidence_inspection" >
+
+        <action
+            android:id="@+id/action_evidencePhotoFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/consultInspectionsFragment"
+        android:name="com.webcontrol.android.ui.newchecklist.views.consultinspections.ConsultInspectionsFragment"
+        android:label="fragment_check_list_filling"
+        tools:layout="@layout/fragment_consult_checklist" >
+        <action
+            android:id="@+id/action_consultInspectionsFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+
+</navigation>

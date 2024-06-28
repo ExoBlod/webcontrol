@@ -1,0 +1,80 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">196dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="icon_star">25dp</dimen>icon_star
+    <dimen name="padding_list_row">16dp</dimen>
+    <dimen name="icon_width_height">40dp</dimen>
+    <dimen name="msg_text_primary">16sp</dimen>
+    <dimen name="msg_text_secondary">14sp</dimen>
+    <dimen name="icon_text">22sp</dimen>
+    <dimen name="timestamp">12sp</dimen>
+
+    <dimen name="radius_input_text">20dp</dimen>
+    <dimen name="radius_button">26dp</dimen>
+
+    <dimen name="logo_width">250dp</dimen>
+    <dimen name="logo_height">100dp</dimen>
+
+    <dimen name="nav_header_userprofil_height">100dp</dimen>
+    <dimen name="nav_header_username_textsize">18sp</dimen>
+    <dimen name="nav_header_job_textsize">14sp</dimen>
+    <dimen name="nav_menu_height">60dp</dimen>
+    <dimen name="nav_menu_margin_left">24dp</dimen>
+    <dimen name="nav_menu_icon_height">20dp</dimen>
+    <dimen name="nav_menu_title_textsize">16sp</dimen>
+    <dimen name="nav_submenu_title_textsize">14sp</dimen>
+    <dimen name="nav_submenu_title_margin_left">60dp</dimen>
+
+    <dimen name="sekizbit_switch_padding">3dp</dimen>
+
+    <dimen name="margin_top_default">16dp</dimen>
+    <dimen name="margin_bottom_default">16dp</dimen>
+    <dimen name="margin_start_default">16dp</dimen>
+    <dimen name="margin_end_default">16dp</dimen>
+
+    <dimen name="text_size_default">16sp</dimen>
+    <dimen name="text_size_min">14sp</dimen>
+    <dimen name="text_size_title">18sp</dimen>
+
+    <dimen name="margin_min">8dp</dimen>
+
+    <dimen name="icon_size">40dp</dimen>
+
+    <dimen name="datos_conductor_operador">23sp</dimen>
+    <dimen name="licencia_interna">22sp</dimen>
+    <dimen name="conductor_operador">22sp</dimen>
+    <dimen name="autorizacion_conducion">16sp</dimen>
+    <dimen name="empresa">15sp</dimen>
+    <dimen name="area">15sp</dimen>
+    <dimen name="puesto">15sp</dimen>
+    <dimen name="authorizado">15sp</dimen>
+    <dimen name="expedicion">15sp</dimen>
+    <dimen name="vencimiento">15sp</dimen>
+    <dimen name="titulo">13sp</dimen>
+    <dimen name="licencia">12sp</dimen>
+    <dimen name="clase">12sp</dimen>
+    <dimen name="revalidacion">12sp</dimen>
+    <dimen name="restriccion">12sp</dimen>
+    <dimen name="nombre">23sp</dimen>
+    <dimen name="apellidos">21sp</dimen>
+    <dimen name="movilesSobreTerreno">20sp</dimen>
+
+    <dimen name="dato_acceso">24sp</dimen>
+    <dimen name="empresa_contratista">14sp</dimen>
+    <dimen name="empresa_contratista_txt">18sp</dimen>
+    <dimen name="empresa_sub_contratista">14sp</dimen>
+    <dimen name="empresa_sub_contratista_txt">18sp</dimen>
+    <dimen name="items">14sp</dimen>
+    <dimen name="items_zona">11sp</dimen>
+    <dimen name="vehiculo">22sp</dimen>
+    <dimen name="conduccion">22sp</dimen>
+    <dimen name="nombre_documento">13sp</dimen>
+
+    <dimen name="names">13sp</dimen>
+<!--    <dimen name="title_back_credential">10sp</dimen>-->
+<!--    <dimen name="title_back_credential_rv">9sp</dimen>-->
+
+</resources>

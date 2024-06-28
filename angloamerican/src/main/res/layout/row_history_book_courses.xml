@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:layout_marginHorizontal="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/margin_min"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/infoLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_text_rounded_left"
+            app:layout_constraintEnd_toStartOf="@id/guidelineVertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/txtCourseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/fab_margin"
+                android:text="Curso 1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/lblState"
+                app:layout_constraintTop_toBottomOf="@id/lblState"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/lblDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/lblState"
+                app:layout_constraintTop_toTopOf="@id/lblState"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="01/01/2023" />
+
+            <TextView
+                android:id="@+id/lblState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:text="Aprobado"
+                android:textColor="@color/color_green"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/ratingLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/bg_text_rounded"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_min"
+            android:layout_marginStart="@dimen/margin_min"
+            android:text="NOTA"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_green"
+            android:textSize="20sp"
+            android:text="80"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/imgCheck"
+            android:layout_width="19dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="4dp"
+            android:tint="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtResult"
+            app:srcCompat="@drawable/check" />
+
+        <ImageView
+            android:id="@+id/imgFail"
+            android:layout_width="19dp"
+            android:layout_height="17dp"
+            android:tint="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgCheck"
+            app:srcCompat="@drawable/error"             />
+
+        <TextView
+            android:id="@+id/txtCorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textSize="12sp"
+            android:text="32"
+            app:layout_constraintBottom_toBottomOf="@+id/imgCheck"
+            app:layout_constraintStart_toEndOf="@+id/imgCheck"
+            tools:layout_editor_absoluteX="31dp" />
+
+        <TextView
+            android:id="@+id/txtFailed"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textSize="12sp"
+            android:text="8"
+            app:layout_constraintStart_toEndOf="@+id/imgFail"
+            app:layout_constraintBottom_toBottomOf="@+id/imgFail"
+            tools:layout_editor_absoluteX="31dp" />
+
+        <TextView
+            android:id="@+id/txtQuestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Total Preguntas: 40"
+            app:layout_constraintStart_toStartOf="@+id/txtFailed"
+            app:layout_constraintTop_toBottomOf="@+id/imgFail" />
+
+        <Button
+            android:id="@+id/btnShowCertificate"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:textSize="8sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Certificado"
+            style="@drawable/flat_bottom"
+            android:enabled="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtQuestions"
+            />
+
+        <SeekBar
+            android:id="@+id/seekBarCorrect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:max="100"
+            android:progress="80"
+            android:progressTint="@color/color_green"
+            android:thumbTint="@color/color_green"
+            app:layout_constraintBottom_toTopOf="@+id/seekBarFail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/seekBarFail"
+            app:layout_constraintTop_toTopOf="@+id/txtCorrect" />
+
+        <SeekBar
+            android:id="@+id/seekBarFail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:max="100"
+            android:progress="20"
+            android:thumbTint="@color/red"
+            android:progressTint="@color/red"
+            app:layout_constraintBottom_toTopOf="@+id/txtQuestions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtFailed"
+            app:layout_constraintTop_toTopOf="@+id/txtFailed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

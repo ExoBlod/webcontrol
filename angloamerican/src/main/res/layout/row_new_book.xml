@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/message_container"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_marginHorizontal="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/bg_text_rounded_gray_stroke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/txtCourseName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:maxLines="2"
+            android:text="Course Name"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtCapitalLetter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtCapitalLetter"
+            app:layout_constraintTop_toTopOf="@+id/txtCapitalLetter" />
+
+
+
+        <TextView
+            android:id="@+id/lblDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disponible hasta: 05/08/2023"
+            android:textStyle="bold"
+            android:textColor="@color/color_green"
+            android:layout_marginStart="16dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtCourseName"
+            app:layout_constraintStart_toEndOf="@+id/txtCapitalLetter"
+            />
+
+        <TextView
+            android:id="@+id/lblState"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="43 Cupos Libres"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            android:layout_marginStart="8sp"
+            app:layout_constraintStart_toEndOf="@+id/imgCupos"
+           app:layout_constraintTop_toBottomOf="@id/txtCourseName"/>
+
+        <TextView
+            android:id="@+id/txtCapitalLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imgCupos"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@+id/txtCapitalLetter"
+            app:layout_constraintTop_toBottomOf="@+id/txtCourseName"
+            app:srcCompat="@drawable/people" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

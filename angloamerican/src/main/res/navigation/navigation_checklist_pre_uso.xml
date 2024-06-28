@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_checklist_pre_uso"
+    app:startDestination="@id/consultInspectionsPreUsoFragment">
+
+    <fragment
+        android:id="@+id/historyPreUsoFragment"
+        android:name="com.webcontrol.angloamerican.ui.checklistpreuso.views.history.HistoryChecklistFragment"
+        android:label="fragment_history_pre_uso"
+        tools:layout="@layout/fragment_pre_uso_inspection_history" >
+        <action
+            android:id="@+id/action_historyPreUsoFragment_to_swornDeclarationPreUsoFragment"
+            app:destination="@id/swornDeclarationPreUsoFragment" />
+        <action
+            android:id="@+id/action_historyPreUsoFragment_to_listCheckListPreUsoFragment"
+            app:destination="@id/listCheckListPreUsoFragment" />
+        <action
+            android:id="@+id/action_historyPreUsoFragment_to_consultInspectionFragment"
+            app:destination="@id/consultInspectionsPreUsoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/swornDeclarationPreUsoFragment"
+        android:name="com.webcontrol.angloamerican.ui.checklistpreuso.views.sworndeclaration.SwornDeclarationFragment"
+        android:label="fragment_sworn_declaration_pre_uso"
+        tools:layout="@layout/fragment_pre_uso_sworn_statement" >
+        <action
+            android:id="@+id/action_swornDeclarationPreUsoFragment_to_signaturePreUsoFragment"
+            app:destination="@id/signaturePreUsoFragment" />
+        <action
+            android:id="@+id/action_swornDeclarationPreUsoFragment_to_inputDataPreUsoFragment"
+            app:destination="@id/inputDataPreUsoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signaturePreUsoFragment"
+        android:name="com.webcontrol.angloamerican.ui.checklistpreuso.views.signature.SignatureFragment"
+        android:label="fragment_signature_pre_uso"
+        tools:layout="@layout/fragment_pre_uso_record_signature" >
+        <action
+            android:id="@+id/action_signaturePreUsoFragment_to_inputDataPreUsoFragment"
+            app:destination="@id/inputDataPreUsoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inputDataPreUsoFragment"
+        android:name="com.webcontrol.angloamerican.ui.checklistpreuso.views.inputdata.InputDataFragment"
+        android:label="fragment_input_data_pre_uso"
+        tools:layout="@layout/fragment_pre_uso_vehicular_inspection" >
+        <action
+            android:id="@+id/action_inputDataPreUsoFragment_to_listCheckListPreUsoFragment"
+            app:destination="@id/listCheckListPreUsoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listCheckListPreUsoFragment"
+        android:name="com.webcontrol.angloamerican.ui.checklistpreuso.views.listchecklist.ListCheckListPreUsoFragment"
+        android:label="fragment_input_data2_pre_uso"
+        tools:layout="@layout/fragment_pre_uso_checklist_vehicular_inspection" >
+        <action
+            android:id="@+id/action_listCheckListPreUsoFragment_to_checkListFillingPreUsoFragment"
+            app:destination="@id/checkListFillingPreUsoFragment">
+            <argument
+                android:name="position"
+                app:argType="integer"/>
+        </action>
+        <action
+            android:id="@+id/action_listCheckListPreUsoFragment_to_evidencePhotoPreUsoFragment"
+            app:destination="@id/evidencePhotoPreUsoFragment" />
+        <action
+            android:id="@+id/action_listCheckListPreUsoFragment_to_historyPreUsoFragment"
+            app:destination="@id/historyPreUsoFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/checkListFillingPreUsoFragment"
+        android:name="com.webcontrol.angloamerican.ui.checklistpreuso.views.checklistfilling.CheckListFillingFragment"
+        android:label="fragment_input_data3_pre_uso"
+        tools:layout="@layout/fragment_pre_uso_test_checklist_vehicular_inspection" >
+        <argument
+            android:name="position"
+            app:argType="integer"
+            android:defaultValue="0"/>
+        <action
+            android:id="@+id/action_checkListFillingPreUsoFragment_to_historyPreUsoFragment"
+            app:destination="@id/historyPreUsoFragment" />
+        <action
+            android:id="@+id/action_checkListFillingPreUsoFragment_to_listCheckListPreUsoFragment"
+            app:destination="@id/listCheckListPreUsoFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/evidencePhotoPreUsoFragment"
+        android:name="com.webcontrol.angloamerican.ui.checklistpreuso.views.takeevidencephoto.TakeEvidencePhotoFragment"
+        android:label="fragment_list_checklist_pre_uso"
+        tools:layout="@layout/fragment_pre_uso_evidence_inspection" >
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/consultInspectionsPreUsoFragment"
+        android:name="com.webcontrol.angloamerican.ui.checklistpreuso.views.consultinspections.ConsultInspectionsFragment"
+        android:label="fragment_check_list_filling_pre_uso"
+        tools:layout="@layout/fragment_pre_uso_consult_checklist" >
+        <action
+            android:id="@+id/action_consultInspectionsPreUsoFragment_to_historyPreUsoFragment"
+            app:destination="@id/historyPreUsoFragment" />
+    </fragment>
+
+</navigation>

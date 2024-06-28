@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="cardSubtitle" format="string|reference" />
+    <attr name="cardDate" format="string|reference" />
+    <attr name="cardIconState" format="reference"/>
+
+    <declare-styleable name="ResumeChecklistCard">
+        <attr name="cardText" />
+        <attr name="cardSubtitle" />
+        <attr name="cardDate" />
+        <attr name="cardIcon" />
+        <attr name="cardIconState" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MessageView">
+        <attr name="imageDrawable" format="reference" localization="suggested" />
+        <attr name="messageText" format="reference|string" localization="suggested" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SettingCardView">
+        <attr name="cardText" format="string|reference" />
+        <attr name="cardSubtext" format="string|reference" />
+        <attr name="cardIcon" format="reference" />
+        <attr name="cardIconTint" format="string|reference" />
+    </declare-styleable>
+</resources>

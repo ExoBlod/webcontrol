@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.webcontrol.angloamerican">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application>
+        <activity
+            android:name=".ui.approvemovements.ui.ApproveMovementsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.bookcourses.BookCoursesActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".ui.preaccessmine.PreAccessMineActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".ui.checklistpreuso.CheckListPreUsoActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

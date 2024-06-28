@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/blank">
+
+    <fragment
+        android:id="@+id/mensajesFragment"
+        android:name="com.webcontrol.android.ui.messages.MensajesFragment"
+        android:label="fragment_mensajes"
+        tools:layout="@layout/fragment_mensajes" />
+
+    <fragment
+        android:id="@+id/examenesFragment"
+        android:name="com.webcontrol.android.ui.examenes.ExamenesFragment"
+        android:label="ExamenesFragment" />
+    <fragment
+        android:id="@+id/resumeFragment"
+        android:name="com.webcontrol.android.ui.dashboard.ResumeFragment"
+        tools:layout="@layout/fragment_resume"
+        android:label="ResumeFragment" />
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.webcontrol.android.ui.webview.WebViewFragment"
+        android:label="WebViewFragment" />
+    <fragment
+        android:id="@+id/historicoEncuestasFragment"
+        android:name="com.webcontrol.android.ui.encuestas.HistoricoEncuestasFragment"
+        android:label="HistoricoEncuestasFragment" />
+    <fragment
+        android:id="@+id/historicoCheckListFragment"
+        android:name="com.webcontrol.android.ui.checklist.HistoricoCheckListFragment"
+        android:label="HistoricoCheckListFragment" />
+    <fragment
+        android:id="@+id/credentialFragment"
+        android:name="com.webcontrol.android.ui.credential.CredentialFragment"
+        android:label="CredentialFragment" />
+    <fragment
+        android:id="@+id/historicoReservasFragment"
+        android:name="com.webcontrol.android.ui.reservabus.HistoricoReservasFragment"
+        android:label="HistoricoReservasFragment" />
+    <fragment
+        android:id="@+id/datosInicialesFragment"
+        android:name="com.webcontrol.android.ui.covid.DatosInicialesFragment"
+        android:label="DatosInicialesFragment" />
+    <fragment
+        android:id="@+id/historialReservaCursoFragment"
+        android:name="com.webcontrol.android.ui.reservacurso.HistorialReservaCursoFragment"
+        android:label="HistorialReservaCursoFragment" />
+    <fragment
+        android:id="@+id/lectorQrFragment"
+        android:name="com.webcontrol.android.ui.lectorqr.LectorQrFragment"
+        android:label="LectorQrFragment"
+        app:navGraph="@navigation/mobile_navigation"/>
+    <fragment
+        android:id="@+id/lectorQrManualFragment"
+        android:name="com.webcontrol.android.ui.capacitaciones.LectorQrManualFragment"
+        android:label="LectorQrManualFragment"
+        app:navGraph="@navigation/mobile_navigation"/>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.webcontrol.android.ui.settings.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment"
+        app:navGraph="@navigation/mobile_navigation" />
+    <fragment
+        android:id="@+id/reservaCursoFragment"
+        android:name="com.webcontrol.android.ui.reservacurso.ReservaCursoFragment"
+        android:label="ReservaCursoFragment" />
+    <fragment
+        android:id="@+id/mainDJFragment"
+        android:name="com.webcontrol.android.ui.covid.antapaccay.declaracion.MainDJFragment"
+        android:label="MainDJFragment" />
+    <fragment
+        android:id="@+id/examenesEncuestasFragment"
+        android:name="com.webcontrol.android.ui.examenes.ExamenesEncuestasFragment"
+        android:label="ExamenesEncuestasFragment" />
+    <fragment
+        android:id="@+id/checkListTestFragment"
+        android:name="com.webcontrol.android.ui.checklist.CheckListTestFragment"
+        android:label="CheckListTestFragment" />
+    <fragment
+        android:id="@+id/historicoCheckListDetalleFragment"
+        android:name="com.webcontrol.android.ui.checklist.HistoricoCheckListDetalleFragment"
+        android:label="HistoricoCheckListDetalleFragment" />
+    <fragment
+        android:id="@+id/checkListIngresoFragment"
+        android:name="com.webcontrol.android.ui.checklist.CheckListIngresoFragment"
+        android:label="CheckListIngresoFragment" />
+    <fragment
+        android:id="@+id/tipoChecklistFragment"
+        android:name="com.webcontrol.android.ui.checklist.TipoChecklistFragment"
+        android:label="TipoChecklistFragment" />
+    <fragment
+        android:id="@+id/encuestasTestFragment"
+        android:name="com.webcontrol.android.ui.encuestas.EncuestasTestFragment"
+        android:label="EncuestasTestFragment" />
+    <fragment
+        android:id="@+id/mainTestFragment"
+        android:name="com.webcontrol.android.ui.covid.antapaccay.cuestionarios.MainTestFragment"
+        android:label="MainTestFragment" />
+    <fragment
+        android:id="@+id/historicoEncuestasDetallesFragment"
+        android:name="com.webcontrol.android.ui.encuestas.HistoricoEncuestasDetallesFragment"
+        android:label="HistoricoEncuestasDetallesFragment" />
+    <fragment
+        android:id="@+id/examenesInicioFragment"
+        android:name="com.webcontrol.android.ui.examenes.ExamenesInicioFragment"
+        android:label="ExamenesInicioFragment" />
+    <fragment
+        android:id="@+id/examenesResultadosFragment"
+        android:name="com.webcontrol.android.ui.examenes.ExamenesResultadosFragment"
+        android:label="ExamenesResultadosFragment" />
+    <fragment
+        android:id="@+id/examenesPreguntasFragment"
+        android:name="com.webcontrol.android.ui.examenes.ExamenesPreguntasFragment"
+        android:label="ExamenesPreguntasFragment" />
+    <fragment
+        android:id="@+id/detalleReservaCursoFragment"
+        android:name="com.webcontrol.android.ui.reservacurso.DetalleReservaCursoFragment"
+        android:label="DetalleReservaCursoFragment" />
+    <fragment
+        android:id="@+id/detalleCapacitacionesFragment"
+        android:name="com.webcontrol.android.ui.capacitaciones.DetalleCapacitacionesFragment"
+        android:label="DetalleCapacitacionesFragment" />
+    <fragment
+        android:id="@+id/historialReservaBusFragment"
+        android:name="com.webcontrol.android.angloamerican.ui.reservabus.HistorialReservaBusFragment"
+        android:label="HistorialReservaBusFragment" >
+        <action
+            android:id="@+id/action_historialReservaBusFragment_to_fieldsFillReservaBusFragment2"
+            app:destination="@id/fieldsFillReservaBusFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectReservaBusFragment"
+        android:name="com.webcontrol.android.angloamerican.ui.reservabus.SelectReservaBusFragment"
+        android:label="SelectReservaBusFragment" />
+    <fragment
+        android:id="@+id/selectSeatReservaBusFragment"
+        android:name="com.webcontrol.android.angloamerican.ui.reservabus.SelectSeatReservaBusFragment"
+        android:label="SelectSeatReservaBusFragment" />
+    <fragment
+        android:id="@+id/fieldsFillReservaBusFragment"
+        android:name="com.webcontrol.android.angloamerican.ui.reservabus.FieldsFillReservaBusFragment"
+        android:label="FieldsFillReservaBusFragment" />
+    <fragment
+        android:id="@+id/DetalleReservaFragment"
+        android:name="com.webcontrol.android.angloamerican.ui.reservabus.DetalleReservaFragment"
+        android:label="Hilt_DetalleReservaFragment" />
+    <fragment
+        android:id="@+id/updateDocFragment"
+        android:name="com.webcontrol.android.ui.owndoc.UpdateDocFragment"
+        android:label="UpdateDocFragment" />
+    <fragment
+        android:id="@+id/ownDocDetailsFragment"
+        android:name="com.webcontrol.android.ui.owndoc.OwnDocDetailsFragment"
+        android:label="OwnDocDetailsFragment" />
+    <fragment
+        android:id="@+id/ownDocFragment"
+        android:name="com.webcontrol.android.ui.owndoc.OwnDocFragment"
+        android:label="OwnDocFragment" />
+    <fragment
+        android:id="@+id/blank"
+        android:name="com.webcontrol.android.ui.lectorqr.Blank"
+        android:label="Blank" />
+    <fragment
+        android:id="@+id/angloamericanCredentialFragment"
+        android:name="com.webcontrol.angloamerican.ui.credential.AngloamericanCredentialFragment"
+        android:label="AngloamericanCredentialFragment" />
+    <fragment
+        android:id="@+id/controlPreaccesoFragment"
+        android:name="com.webcontrol.android.ui.preacceso.ControlPreaccesoFragment"
+        android:label="ControlPreaccesoFragment" />
+    <fragment
+        android:id="@+id/quellavecoCredentialVirtualFragment"
+        android:name="com.webcontrol.android.angloamerican.ui.credentialVirtual.QuellavecoCredentialVirtualFragment"
+        android:label="QuellavecoCredentialVirtualFragment" />
+    <fragment
+        android:id="@+id/quellavecoCredentialLicenciaFragment"
+        android:name="com.webcontrol.android.angloamerican.ui.credentialLicencia.QuellavecoCredentialLicenciaFragment"
+        android:label="QuellavecoCredentialLicenciaFragment" />
+    <fragment
+        android:id="@+id/quellavecoCredentialFragment"
+        android:name="com.webcontrol.android.angloamerican.ui.credential.QuellavecoCredentialFragment"
+        android:label="QuellavecoCredentialFragment" />
+    <fragment
+        android:id="@+id/goldfieldsCredentialFragment"
+        android:name="com.webcontrol.android.ui.credential.GoldfieldsCredentialFragment"
+        android:label="GoldfieldsCredentialFragment" />
+    <fragment
+        android:id="@+id/kinrossCredentialFragment"
+        android:name="com.webcontrol.android.ui.credential.KinrossCredentialFragment"
+        android:label="KinrossCredentialFragment" />
+    <fragment
+        android:id="@+id/barrickCredentialFragment"
+        android:name="com.webcontrol.android.ui.credential.BarrickCredentialFragment"
+        android:label="BarrickCredentialFragment" />
+    <fragment
+        android:id="@+id/capacitacionesFragment"
+        android:name="com.webcontrol.android.ui.capacitaciones.CapacitacionesFragment"
+        android:label="CapacitacionesFragment" />
+
+    <fragment
+        android:id="@+id/mainDJFragment2"
+        android:name="com.webcontrol.android.ui.covid.declaracion.MainDJFragment"
+        tools:layout="@layout/fragment_main_test"
+        android:label="MainDJFragment" />
+    <fragment
+        android:id="@+id/pucobreCredentialFragment"
+        android:name="com.webcontrol.pucobre.ui.credential.PucobreCredentialFragment"
+        android:label="PucobreCredentialFragment" />
+    <fragment
+        android:id="@+id/pucobreQRCredentialFragment"
+        android:name="com.webcontrol.pucobre.ui.credential.PucobreQrCredentialFragment"
+        android:label="PucobreQRCredentialFragment" />
+    <fragment
+            android:id="@+id/phcQRCredentialFragment"
+            android:name="com.webcontrol.android.ui.lectorqrPHC.PHCQrCredentialFragment"
+            android:label="PHCQrCredentialFragment" />
+    <fragment
+        android:id="@+id/bambasCredentialFragment"
+        android:name="com.webcontrol.android.ui.credential.credentialBambas.BambasCredentialFragment"
+        android:label="BambasCredentialFragment" />
+    <fragment
+        android:id="@+id/poderosaCredentialFragment"
+        android:name="com.webcontrol.android.ui.credential.credentialLaPoderosa.PoderosaCredentialFragment"
+        android:label="PoderosaCredencialFragment"
+        />
+    <fragment
+        android:id="@+id/settingsFragment2"
+        android:name="com.webcontrol.android.ui.settings.v2.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/attendanceHostFragment"
+        android:name="com.webcontrol.android.ui.attendance.AttendanceHostFragment"
+        android:label="AttendanceHostFragment" />
+    <fragment
+        android:id="@+id/yamanaCredentialFragment"
+        android:name="com.webcontrol.android.ui.credential.YamanaCredentialFragment"
+        android:label="YamanaCredentialFragment" />
+    <fragment
+        android:id="@+id/ksCredentialFragment"
+        android:name="com.webcontrol.android.ui.credential.KsCredentialFragment"
+        android:label="KsCredentialFragment" />
+    <fragment
+        android:id="@+id/sgscmCredentialFragment"
+        android:name="com.webcontrol.android.ui.credential.SgscmCredentialFragment"
+        android:label="SgscmCredentialFragment" />
+    <fragment
+        android:id="@+id/caseronesCredentialFragment"
+        android:name="com.webcontrol.android.ui.credential.CaseronesCredentialFragment"
+        android:label="CaseronesCredentialFragment" />
+    <fragment
+        android:id="@+id/EACredentialFragment"
+        android:name="com.webcontrol.android.ui.credential.EACredentialFragment"
+        android:label="EACredentialFragment" />
+    <fragment
+        android:id="@+id/datosInicialesFragmentAntapaccay"
+        android:name="com.webcontrol.android.ui.covid.antapaccay.initialdata.DatosInicialesFragment"
+        android:label="DatosInicialesFragment" />
+    <fragment
+            android:id="@+id/lectorQrPHCFragment"
+            android:name="com.webcontrol.android.ui.lectorqrPHC.LectorQrPHCFragment"
+            android:label="LectorQrPHCFragment"
+            app:navGraph="@navigation/mobile_navigation">
+        <action
+                android:id="@+id/action_credential_phc"
+                app:destination="@id/phcQRCredentialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lectorQrPucobreFragment"
+        android:name="com.webcontrol.android.ui.lectorqrPucobre.LectorQrPucobreFragment"
+        android:label="LectorQrPucobreFragment"
+        app:navGraph="@navigation/mobile_navigation">
+        <action
+            android:id="@+id/action_credential"
+            app:destination="@id/pucobreQRCredentialFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/PHCCredentialFragment"
+        android:name="com.webcontrol.android.ui.credential.PacificHydroCredential"
+        android:label="PHCCredentialFragment" />
+    <fragment
+        android:id="@+id/fragmentAR"
+        android:name="com.webcontrol.android.ui.credential.BarrickCredentialFragmentAR"
+        android:label="BarrickAR"/>
+    <fragment
+        android:id="@+id/fragmentRD"
+        android:name="com.webcontrol.android.ui.credential.BarrickCredentialFragmentRD"
+        android:label="BarrickRD" />
+</navigation>

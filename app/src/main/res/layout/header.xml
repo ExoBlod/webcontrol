@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="88dp">
+
+    <TextView
+        android:id="@+id/lbl_NomCurso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/img_ExpandCollapse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Nombre del curso" />
+
+    <TextView
+        android:id="@+id/lblFechaHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lbl_Orador"
+        tools:text="12/12/3000" />
+
+    <TextView
+        android:id="@+id/lblHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/lblFechaHora"
+        app:layout_constraintTop_toBottomOf="@+id/lblFechaHora"
+        tools:text="07:00" />
+
+    <TextView
+        android:id="@+id/lbl_Orador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblSistema"
+        app:layout_constraintEnd_toStartOf="@+id/lblFechaHora"
+        app:layout_constraintStart_toStartOf="@+id/lbl_NomCurso"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_NomCurso"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Ali ConnorsAli ConnorsAli  ConnorsAli ConnorsConnorsAli ConnorsAli Connors" />
+
+    <TextView
+        android:id="@+id/lblSistema"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:textColor="@color/colorSecondary"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lblFechaHora"
+        app:layout_constraintStart_toStartOf="@+id/lbl_Orador"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_Orador"
+        tools:text="Sistema" />
+
+    <ImageView
+        android:id="@+id/img_ExpandCollapse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_NomCurso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lbl_NomCurso"
+        app:srcCompat="@drawable/ic_keyboard_arrow_down" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="RESIDENCIA"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilResidencia"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="24dp"
+                        android:hint="Domicilio o Residencia"
+                        android:textColorHint="@color/colorPrimary"
+                        app:boxBackgroundColor="@color/transparent"
+                        app:boxStrokeColor="@color/colorPrimary">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/spinnerResidencia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#00FFFFFF"
+                            android:editable="false"
+                            android:paddingStart="8dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilDireccion"
+                        style="@style/CompactTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/lblDireccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Direccion Actual de Residencia"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            tools:text="AREQUIPA 123 AREQUIPA" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/viewSpinners"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilPais"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="24dp"
+                            android:hint="País de Residencia"
+                            android:textColorHint="@color/colorPrimary"
+                            app:boxBackgroundColor="@color/transparent"
+                            app:boxStrokeColor="@color/colorPrimary">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/spinnerPais"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#00FFFFFF"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:paddingStart="8dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilDepartamento"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="24dp"
+                            android:hint="Departamento de Residencia"
+                            android:textColorHint="@color/colorPrimary"
+                            app:boxBackgroundColor="@color/transparent"
+                            app:boxStrokeColor="@color/colorPrimary">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/spinnerRegion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#00FFFFFF"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:paddingStart="8dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilProvincia"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="24dp"
+                            android:hint="Provincia de Residencia"
+                            android:textColorHint="@color/colorPrimary"
+                            app:boxBackgroundColor="@color/transparent"
+                            app:boxStrokeColor="@color/colorPrimary">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/spinnerProvincia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#00FFFFFF"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:paddingStart="8dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilDistrito"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="24dp"
+                            android:hint="Distrito de Residencia"
+                            android:textColorHint="@color/colorPrimary"
+                            app:boxBackgroundColor="@color/transparent"
+                            app:boxStrokeColor="@color/colorPrimary">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/spinnerDistrito"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#00FFFFFF"
+                                android:editable="false"
+                                android:focusable="false"
+                                android:paddingStart="8dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/viewEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilePais"
+                            style="@style/CompactTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/lblPais"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="País de Residencia"
+                                android:imeOptions="actionDone"
+                                android:singleLine="true"
+                                tools:text="Peru" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tileDepartamento"
+                            style="@style/CompactTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/lblDepartamento"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Departamento de Residencia"
+                                android:imeOptions="actionDone"
+                                android:singleLine="true"
+                                tools:text="AREQUIPA" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tileProvincia"
+                            style="@style/CompactTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/lblProvincia"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Provincia de Residencia"
+                                android:imeOptions="actionDone"
+                                android:singleLine="true"
+                                tools:text="AREQUIPA" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tileDistrito"
+                            style="@style/CompactTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/lblDistrito"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Distrito de Residencia"
+                                android:imeOptions="actionDone"
+                                android:singleLine="true"
+                                tools:text="HUNTER" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/includeid"
+                        layout="@layout/content_boton_validar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

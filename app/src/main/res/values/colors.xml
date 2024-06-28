@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#163c5d</color>
+    <color name="colorPrimaryDark">#171D28</color>
+    <color name="colorPrimaryLight">#5a6c86</color>
+    <color name="colorAccent">#4b80ab</color>
+    <color name="icons_light">#757575</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorRed">#DF2222</color>
+    <color name="colorBlack">#000000</color>
+
+    <!-- Credentials color -->
+    <color name="colorCredential">#f0ce98</color>
+    <color name="colorCredentialAnglo">#00538C</color>
+    <color name="colorazul">#132A9E</color>
+    <color name="translucentBlue">#BE132A9E</color>
+    <color name="colorAzulOscuro">#0A1754</color>
+    <color name="colorazulclaro">#2F5FEA</color>
+    <color name="colorCeleste">#DBE1F1</color>
+    <color name="colorAzul849FEC">#849FEC</color>
+    <color name="celeste">#73BACB</color>
+    <color name="blancohumo">#F4F7FA</color>
+    <!--    <color name="colorCredentialKS">#7d2196f3</color>-->
+    <color name="colorCredentialKS">#00538C</color>
+    <color name="colorCredentialYamanaMand">#0076b1</color>
+    <color name="colorCredentialYamanaCont">#1D3A63</color>
+    <color name="colorCredentialBambasMand">#A81F27</color>
+    <color name="colorCredentialBambasCont">#322668</color>
+    <color name="colorExternalCredentialKS">#FF5B33</color>
+    <color name="colorCredentialGoldfieldsCont">#FF5B33</color>
+    <color name="colorCredentialGoldfieldsMand">#00538C</color>
+    <color name="colorCredential_bg">#e4d8a9</color>
+    <!--    <color name="colorCredential_bg">#e1d8af</color>-->
+
+    <color name="colorCredentialEA">#00538C</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/colorAccent
+    </color>
+
+    <color name="colorSecondary">#00838e</color>
+    <color name="colorSecondaryDark">#005661</color>
+    <color name="colorSecondaryLight">#4fb3be</color>
+
+    <color name="primaryText">#212121</color>
+    <color name="secondaryText">#757575</color>
+
+    <color name="subtitle">#898B8C</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorCommetBackground">#CEF6F5</color>
+
+    <color name="contentDividerLine">#e0e0e0</color>
+    <color name="contentBadgeTitle">#a9a9a9</color>
+    <color name="mainTextColor">#343d43</color>
+
+    <color name="slidesText">#fefefe</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="successful_exam">#32CD32</color>
+    <color name="failed_exame">#FF0000</color>
+    <color name="barrick">#EEFF00</color>
+    <color name="green">#2e7d32</color>
+    <color name="orange">#de9f42</color>
+    <color name="holo_red_dark">#ffcc0000</color>
+
+    <color name="from">#000000</color>
+    <color name="subject">#111111</color>
+    <color name="timestamp">#4285f4</color>
+    <color name="message">#7a7a7a</color>
+    <color name="bg_circle_default">#666666</color>
+    <color name="row_activated">#e0e0e0</color>
+
+    <color name="gray">#8b8e94</color>
+
+    <color name="my_spinner_text_color">#FFFFFF</color>
+
+    <color name="icon_tint_selected">#fed776</color>
+    <color name="icon_tint_normal">#7a7a7a</color>
+
+    <color name="colorGrayLight">#9f9f9f</color>
+
+    <color name="sekizbit_switch_background">#294A6D</color>
+    <color name="sekizbit_switch_stroke">#294A6D</color>
+    <color name="sekizbit_switch_thumb">#ffffff</color>
+
+    <color name="sekizbit_switch_text_selected">@android:color/black</color>
+    <color name="sekizbit_switch_text_unselected">@android:color/white</color>
+
+    <color name="colorCheckListNo">#D04B29</color>
+    <color name="navSubmenuSelected">#E1F5FE</color>
+    <color name="navSubmenuSelectedText">#089AF2</color>
+
+    <!-- Map circle color -->
+    <color name="strokeColorIn">#0091ea</color>
+    <color name="shadeColorIn">#7d2196f3</color>
+    <color name="strokeColorOut">#d50000</color>
+    <color name="shadeColorOut">#7dff1744</color>
+
+    <color name="trans">#00000000</color>
+
+    <color name="dateColorRed">#F44336</color>
+    <color name="dateColorBlue">#163c5d</color>
+
+    <color name="lightRed">#FFDDDD</color>
+</resources>

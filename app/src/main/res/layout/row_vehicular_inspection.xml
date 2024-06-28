@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/message_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lblCountCheckList"
+            android:layout_width="@dimen/checklist_box"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/nav_menu_margin_left"
+            android:background="@drawable/checklist_box"
+            android:paddingVertical="@dimen/margin_min_cl"
+            android:paddingStart="@dimen/fab_margin"
+            android:text="Luces"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_default"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/nav_menu_margin_left"
+            android:background="@drawable/checklist_box_btn"
+            android:padding="4dp"
+            android:rotation="180"
+            app:layout_constraintBottom_toBottomOf="@+id/lblCountCheckList"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lblCountCheckList"
+            app:srcCompat="@drawable/ic_baseline_arrow_back"
+            app:tint="@color/white" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

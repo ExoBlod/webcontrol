@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#163c5d</color>
+    <color name="subtitle">#898B8C</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorPrimaryDark">#171D28</color>
+    <color name="colorAccent">#4b80ab</color>
+    <color name="white">@android:color/white</color>
+    <color name="colorCredentialAnglo">#00538C</color>
+    <color name="colorExternalCredentialAnglo">#FF5B33</color>
+    <color name="sekizbit_switch_text_unselected">@android:color/white</color>
+
+
+    <color name="colorCredentialAngloN">#00538C</color>
+    <color name="contentDividerLine">#e0e0e0</color>
+    <color name="contentBadgeTitle">#a9a9a9</color>
+    <color name="mainTextColor">#343d43</color>
+    <color name="colorRed">#DF2222</color>
+
+    <color name="red">#F44336</color>
+    <color name="green">#2e7d32</color>
+    <color name="black">#000000</color>
+
+
+    <!-- Credentials color -->
+    <color name="colorCredential">#f0ce98</color>
+<!--     <color name="colorCredentialAnglo">#00538C</color>-->
+   <color name="colorazul">#132A9E</color>
+   <color name="translucentBlue">#BE132A9E</color>
+   <color name="colorAzulOscuro">#0A1754</color>
+   <color name="colorazulclaro">#2F5FEA</color>
+   <color name="colorCeleste">#DBE1F1</color>
+   <color name="colorAzul849FEC">#849FEC</color>
+   <color name="celeste">#73BACB</color>
+   <color name="blancohumo">#F4F7FA</color>
+   <color name="light_grey">#DDDDDC</color>
+   <color name="gray">#777777</color>
+   <color name="turquoise">#22A2F2</color>
+   <color name="blueCourses">#2F5FEA</color>
+    <color name="orange">#de9f42</color>
+    <color name="icon_tint_selected">#fed776</color>
+
+    <color name="backgroundColor">#F2F2F6</color>
+    <color name="lightRed">#FFDDDD</color>
+
+    <color name="card_text_color_gray">#596269</color>
+    <color name="card_background_color_green">#D8F2E1</color>
+    <color name="card_background_color_red">#FFA6A6</color>
+    <color name="card_background_color_orange">#FFDDB6</color>
+    <color name="card_background_color_gray">#ABD0D0D0</color>
+
+    <color name="helper_text_color">#2194FF</color>
+
+    <!--Movement Card-->
+    <color name="id_text_color">#7B7B7C</color>
+    <color name="description_text_color">#9F9FA1</color>
+    <color name="dates_ost_text_color">#090909</color>
+    <color name="card_main_color">#FF9E0D</color>
+    <color name="approve_button_color">#20437D</color>
+</resources>

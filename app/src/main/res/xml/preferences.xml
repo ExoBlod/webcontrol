@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreference
+        android:key="pref_fingerprint"
+        android:summary="Usar la huella digital para ingresar a su cuenta WebControl"
+        android:title="Huella digital"
+        android:icon="@drawable/ic_fingerprint_black"
+        />
+    <SwitchPreference
+        android:key="pref_grant_location"
+        android:summary="Habilitar el seguimiento a su ubicación mediante WebControl"
+        android:title="Ubicación"
+        app:isPreferenceVisible="false"
+        android:icon="@drawable/ic_outline_gps_fixed_72"
+        />
+    <Preference
+        android:key="pref_cambiar_clave"
+        android:summary="Cambie la contraseña de acceso a su cuenta de WebControl"
+        android:title="Actualizar contraseña"
+        android:icon="@drawable/ic_lock_outline_black_24dp"/>
+
+    <Preference
+        android:key="pref_telefono"
+        android:summary="Cambie el nro de teléfono asociado a su cuenta de WebControl"
+        android:title="Actualizar teléfono"
+        android:icon="@drawable/ic_phone_android_black_24dp" />
+
+    <Preference
+        android:key="pref_email"
+        android:summary="Cambie la dirección de correo electrónico asociada a su cuenta de WebControl"
+        android:title="Actualizar correo electrónico"
+        android:icon="@drawable/ic_email_black_24dp"
+        />
+
+    <Preference
+        android:key="pref_permission"
+        android:summary="Cambie los permisos que brinda a la aplicación"
+        android:title="Actualizar permisos"
+        android:icon="@drawable/ic_outline_settings_24"
+        app:isPreferenceVisible="false"
+        />
+    <Preference
+        android:key= "pref_privacy_policy"
+        android:summary="Consulte las politicas de Privacidad de la aplicación"
+        android:title="Política de Privacidad"
+        android:icon="@drawable/ic_info"
+        />
+    <Preference
+        android:key= "pref_delete_account"
+        android:summary="Elimina tu cuenta definitavamente"
+        android:title="Eliminar cuenta"
+        android:icon="@drawable/ic_borrar_usuario"
+        />
+</PreferenceScreen>
